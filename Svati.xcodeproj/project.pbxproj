@@ -1,0 +1,745 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010356812A657F7B00CBC59A /* GeneratorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010356802A657F7B00CBC59A /* GeneratorText.swift */; };
+		0157E1822A6576BA00FB0559 /* SvatiDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0157E1812A6576BA00FB0559 /* SvatiDataService.swift */; };
+		0157E1852A65772200FB0559 /* SvatiStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0157E1842A65772200FB0559 /* SvatiStructure.swift */; };
+		0157E1882A657A7600FB0559 /* database.json in Resources */ = {isa = PBXBuildFile; fileRef = 0157E1872A657A7600FB0559 /* database.json */; };
+		018BFE722A655247008E13CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE712A655247008E13CB /* AppDelegate.swift */; };
+		018BFE742A655247008E13CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE732A655247008E13CB /* SceneDelegate.swift */; };
+		018BFE762A655247008E13CB /* DnesniSvetciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE752A655247008E13CB /* DnesniSvetciViewController.swift */; };
+		018BFE7B2A655249008E13CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018BFE7A2A655249008E13CB /* Assets.xcassets */; };
+		018BFE7E2A655249008E13CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018BFE7C2A655249008E13CB /* LaunchScreen.storyboard */; };
+		018BFE892A65524A008E13CB /* SvatiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE882A65524A008E13CB /* SvatiTests.swift */; };
+		018BFE932A65524A008E13CB /* SvatiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE922A65524A008E13CB /* SvatiUITests.swift */; };
+		018BFE952A65524A008E13CB /* SvatiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE942A65524A008E13CB /* SvatiUITestsLaunchTests.swift */; };
+		01FBB11D2A6557F8004A34C6 /* SvatiTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FBB11C2A6557F7004A34C6 /* SvatiTabBarController.swift */; };
+		01FBB11F2A657323004A34C6 /* SeznamSvetcuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FBB11E2A657323004A34C6 /* SeznamSvetcuTableViewController.swift */; };
+		01FBB1212A657356004A34C6 /* OAplikaciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FBB1202A657356004A34C6 /* OAplikaciViewController.swift */; };
+		01FBB1232A65737D004A34C6 /* VyhledavaniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FBB1222A65737D004A34C6 /* VyhledavaniViewController.swift */; };
+		01FBB1262A65745B004A34C6 /* SvatiColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FBB1252A65745B004A34C6 /* SvatiColor.swift */; };
+		A37AFAD97C9DF699BE9E689F /* Pods_Svati.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FEC3925EE45A568A69CB52E /* Pods_Svati.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		018BFE852A65524A008E13CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018BFE662A655247008E13CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 018BFE6D2A655247008E13CB;
+			remoteInfo = Svati;
+		};
+		018BFE8F2A65524A008E13CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018BFE662A655247008E13CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 018BFE6D2A655247008E13CB;
+			remoteInfo = Svati;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		010356802A657F7B00CBC59A /* GeneratorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorText.swift; sourceTree = "<group>"; };
+		0157E1812A6576BA00FB0559 /* SvatiDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiDataService.swift; sourceTree = "<group>"; };
+		0157E1842A65772200FB0559 /* SvatiStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiStructure.swift; sourceTree = "<group>"; };
+		0157E1872A657A7600FB0559 /* database.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = database.json; sourceTree = "<group>"; };
+		018BFE6E2A655247008E13CB /* Svati.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Svati.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		018BFE712A655247008E13CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		018BFE732A655247008E13CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		018BFE752A655247008E13CB /* DnesniSvetciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnesniSvetciViewController.swift; sourceTree = "<group>"; };
+		018BFE7A2A655249008E13CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		018BFE7D2A655249008E13CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		018BFE7F2A655249008E13CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		018BFE842A65524A008E13CB /* SvatiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SvatiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		018BFE882A65524A008E13CB /* SvatiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiTests.swift; sourceTree = "<group>"; };
+		018BFE8E2A65524A008E13CB /* SvatiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SvatiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		018BFE922A65524A008E13CB /* SvatiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiUITests.swift; sourceTree = "<group>"; };
+		018BFE942A65524A008E13CB /* SvatiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		01FBB11C2A6557F7004A34C6 /* SvatiTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiTabBarController.swift; sourceTree = "<group>"; };
+		01FBB11E2A657323004A34C6 /* SeznamSvetcuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeznamSvetcuTableViewController.swift; sourceTree = "<group>"; };
+		01FBB1202A657356004A34C6 /* OAplikaciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAplikaciViewController.swift; sourceTree = "<group>"; };
+		01FBB1222A65737D004A34C6 /* VyhledavaniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VyhledavaniViewController.swift; sourceTree = "<group>"; };
+		01FBB1252A65745B004A34C6 /* SvatiColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiColor.swift; sourceTree = "<group>"; };
+		5FEC3925EE45A568A69CB52E /* Pods_Svati.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Svati.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46CFB51B336926A0E698520 /* Pods-Svati.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Svati.debug.xcconfig"; path = "Target Support Files/Pods-Svati/Pods-Svati.debug.xcconfig"; sourceTree = "<group>"; };
+		BE3180ED856D2B1CCA56BEEF /* Pods-Svati.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Svati.release.xcconfig"; path = "Target Support Files/Pods-Svati/Pods-Svati.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		018BFE6B2A655247008E13CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A37AFAD97C9DF699BE9E689F /* Pods_Svati.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		018BFE812A65524A008E13CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		018BFE8B2A65524A008E13CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0157E1802A6576A300FB0559 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0157E1812A6576BA00FB0559 /* SvatiDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0157E1832A65771500FB0559 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0157E1842A65772200FB0559 /* SvatiStructure.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0157E1862A657A4D00FB0559 /* SupportedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				0157E1872A657A7600FB0559 /* database.json */,
+			);
+			path = SupportedFiles;
+			sourceTree = "<group>";
+		};
+		018BFE652A655247008E13CB = {
+			isa = PBXGroup;
+			children = (
+				018BFE702A655247008E13CB /* Svati */,
+				018BFE872A65524A008E13CB /* SvatiTests */,
+				018BFE912A65524A008E13CB /* SvatiUITests */,
+				018BFE6F2A655247008E13CB /* Products */,
+				515FB41CDB43105BEF171B8E /* Pods */,
+				08C4B3D1EE7CF2D240371970 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		018BFE6F2A655247008E13CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				018BFE6E2A655247008E13CB /* Svati.app */,
+				018BFE842A65524A008E13CB /* SvatiTests.xctest */,
+				018BFE8E2A65524A008E13CB /* SvatiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		018BFE702A655247008E13CB /* Svati */ = {
+			isa = PBXGroup;
+			children = (
+				0157E1862A657A4D00FB0559 /* SupportedFiles */,
+				0157E1832A65771500FB0559 /* Models */,
+				0157E1802A6576A300FB0559 /* Services */,
+				01FBB1242A65744B004A34C6 /* Utilities */,
+				01FBB11B2A65561B004A34C6 /* Controllers */,
+				018BFE712A655247008E13CB /* AppDelegate.swift */,
+				018BFE732A655247008E13CB /* SceneDelegate.swift */,
+				018BFE7A2A655249008E13CB /* Assets.xcassets */,
+				018BFE7C2A655249008E13CB /* LaunchScreen.storyboard */,
+				018BFE7F2A655249008E13CB /* Info.plist */,
+			);
+			path = Svati;
+			sourceTree = "<group>";
+		};
+		018BFE872A65524A008E13CB /* SvatiTests */ = {
+			isa = PBXGroup;
+			children = (
+				018BFE882A65524A008E13CB /* SvatiTests.swift */,
+			);
+			path = SvatiTests;
+			sourceTree = "<group>";
+		};
+		018BFE912A65524A008E13CB /* SvatiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				018BFE922A65524A008E13CB /* SvatiUITests.swift */,
+				018BFE942A65524A008E13CB /* SvatiUITestsLaunchTests.swift */,
+			);
+			path = SvatiUITests;
+			sourceTree = "<group>";
+		};
+		01FBB11B2A65561B004A34C6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				018BFE752A655247008E13CB /* DnesniSvetciViewController.swift */,
+				01FBB11C2A6557F7004A34C6 /* SvatiTabBarController.swift */,
+				01FBB11E2A657323004A34C6 /* SeznamSvetcuTableViewController.swift */,
+				01FBB1202A657356004A34C6 /* OAplikaciViewController.swift */,
+				01FBB1222A65737D004A34C6 /* VyhledavaniViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		01FBB1242A65744B004A34C6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				01FBB1252A65745B004A34C6 /* SvatiColor.swift */,
+				010356802A657F7B00CBC59A /* GeneratorText.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		08C4B3D1EE7CF2D240371970 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FEC3925EE45A568A69CB52E /* Pods_Svati.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		515FB41CDB43105BEF171B8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A46CFB51B336926A0E698520 /* Pods-Svati.debug.xcconfig */,
+				BE3180ED856D2B1CCA56BEEF /* Pods-Svati.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		018BFE6D2A655247008E13CB /* Svati */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 018BFE982A65524A008E13CB /* Build configuration list for PBXNativeTarget "Svati" */;
+			buildPhases = (
+				9ED02C36C62E99950EB4BB3D /* [CP] Check Pods Manifest.lock */,
+				018BFE6A2A655247008E13CB /* Sources */,
+				018BFE6B2A655247008E13CB /* Frameworks */,
+				018BFE6C2A655247008E13CB /* Resources */,
+				32474224C2214DBD1E8C3962 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Svati;
+			productName = Svati;
+			productReference = 018BFE6E2A655247008E13CB /* Svati.app */;
+			productType = "com.apple.product-type.application";
+		};
+		018BFE832A65524A008E13CB /* SvatiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 018BFE9B2A65524A008E13CB /* Build configuration list for PBXNativeTarget "SvatiTests" */;
+			buildPhases = (
+				018BFE802A65524A008E13CB /* Sources */,
+				018BFE812A65524A008E13CB /* Frameworks */,
+				018BFE822A65524A008E13CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				018BFE862A65524A008E13CB /* PBXTargetDependency */,
+			);
+			name = SvatiTests;
+			productName = SvatiTests;
+			productReference = 018BFE842A65524A008E13CB /* SvatiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		018BFE8D2A65524A008E13CB /* SvatiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 018BFE9E2A65524A008E13CB /* Build configuration list for PBXNativeTarget "SvatiUITests" */;
+			buildPhases = (
+				018BFE8A2A65524A008E13CB /* Sources */,
+				018BFE8B2A65524A008E13CB /* Frameworks */,
+				018BFE8C2A65524A008E13CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				018BFE902A65524A008E13CB /* PBXTargetDependency */,
+			);
+			name = SvatiUITests;
+			productName = SvatiUITests;
+			productReference = 018BFE8E2A65524A008E13CB /* SvatiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		018BFE662A655247008E13CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					018BFE6D2A655247008E13CB = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					018BFE832A65524A008E13CB = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 018BFE6D2A655247008E13CB;
+					};
+					018BFE8D2A65524A008E13CB = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 018BFE6D2A655247008E13CB;
+					};
+				};
+			};
+			buildConfigurationList = 018BFE692A655247008E13CB /* Build configuration list for PBXProject "Svati" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 018BFE652A655247008E13CB;
+			productRefGroup = 018BFE6F2A655247008E13CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				018BFE6D2A655247008E13CB /* Svati */,
+				018BFE832A65524A008E13CB /* SvatiTests */,
+				018BFE8D2A65524A008E13CB /* SvatiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		018BFE6C2A655247008E13CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				018BFE7E2A655249008E13CB /* LaunchScreen.storyboard in Resources */,
+				0157E1882A657A7600FB0559 /* database.json in Resources */,
+				018BFE7B2A655249008E13CB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		018BFE822A65524A008E13CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		018BFE8C2A65524A008E13CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32474224C2214DBD1E8C3962 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Svati/Pods-Svati-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Svati/Pods-Svati-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Svati/Pods-Svati-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ED02C36C62E99950EB4BB3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Svati-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		018BFE6A2A655247008E13CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01FBB1212A657356004A34C6 /* OAplikaciViewController.swift in Sources */,
+				018BFE762A655247008E13CB /* DnesniSvetciViewController.swift in Sources */,
+				01FBB11F2A657323004A34C6 /* SeznamSvetcuTableViewController.swift in Sources */,
+				01FBB1232A65737D004A34C6 /* VyhledavaniViewController.swift in Sources */,
+				0157E1822A6576BA00FB0559 /* SvatiDataService.swift in Sources */,
+				010356812A657F7B00CBC59A /* GeneratorText.swift in Sources */,
+				01FBB11D2A6557F8004A34C6 /* SvatiTabBarController.swift in Sources */,
+				01FBB1262A65745B004A34C6 /* SvatiColor.swift in Sources */,
+				018BFE722A655247008E13CB /* AppDelegate.swift in Sources */,
+				018BFE742A655247008E13CB /* SceneDelegate.swift in Sources */,
+				0157E1852A65772200FB0559 /* SvatiStructure.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		018BFE802A65524A008E13CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				018BFE892A65524A008E13CB /* SvatiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		018BFE8A2A65524A008E13CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				018BFE952A65524A008E13CB /* SvatiUITestsLaunchTests.swift in Sources */,
+				018BFE932A65524A008E13CB /* SvatiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		018BFE862A65524A008E13CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 018BFE6D2A655247008E13CB /* Svati */;
+			targetProxy = 018BFE852A65524A008E13CB /* PBXContainerItemProxy */;
+		};
+		018BFE902A65524A008E13CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 018BFE6D2A655247008E13CB /* Svati */;
+			targetProxy = 018BFE8F2A65524A008E13CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		018BFE7C2A655249008E13CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				018BFE7D2A655249008E13CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		018BFE962A65524A008E13CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		018BFE972A65524A008E13CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		018BFE992A65524A008E13CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A46CFB51B336926A0E698520 /* Pods-Svati.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32253C46P7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Svati/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "V jednom společenství";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.phracek.Svati;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		018BFE9A2A65524A008E13CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE3180ED856D2B1CCA56BEEF /* Pods-Svati.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32253C46P7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Svati/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "V jednom společenství";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.phracek.Svati;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		018BFE9C2A65524A008E13CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32253C46P7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.phracek.SvatiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Svati.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Svati";
+			};
+			name = Debug;
+		};
+		018BFE9D2A65524A008E13CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32253C46P7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.phracek.SvatiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Svati.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Svati";
+			};
+			name = Release;
+		};
+		018BFE9F2A65524A008E13CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32253C46P7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.phracek.SvatiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Svati;
+			};
+			name = Debug;
+		};
+		018BFEA02A65524A008E13CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32253C46P7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.phracek.SvatiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Svati;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		018BFE692A655247008E13CB /* Build configuration list for PBXProject "Svati" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				018BFE962A65524A008E13CB /* Debug */,
+				018BFE972A65524A008E13CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		018BFE982A65524A008E13CB /* Build configuration list for PBXNativeTarget "Svati" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				018BFE992A65524A008E13CB /* Debug */,
+				018BFE9A2A65524A008E13CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		018BFE9B2A65524A008E13CB /* Build configuration list for PBXNativeTarget "SvatiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				018BFE9C2A65524A008E13CB /* Debug */,
+				018BFE9D2A65524A008E13CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		018BFE9E2A65524A008E13CB /* Build configuration list for PBXNativeTarget "SvatiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				018BFE9F2A65524A008E13CB /* Debug */,
+				018BFEA02A65524A008E13CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 018BFE662A655247008E13CB /* Project object */;
+}

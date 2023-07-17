@@ -1,0 +1,152 @@
+PODS:
+  - BonMot (6.1.3)
+  - DynamicColor (5.0.1)
+  - Firebase/Analytics (10.12.0):
+    - Firebase/Core
+  - Firebase/Core (10.12.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 10.12.0)
+  - Firebase/CoreOnly (10.12.0):
+    - FirebaseCore (= 10.12.0)
+  - Firebase/Database (10.12.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 10.12.0)
+  - FirebaseAnalytics (10.12.0):
+    - FirebaseAnalytics/AdIdSupport (= 10.12.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (10.12.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleAppMeasurement (= 10.12.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseCore (10.12.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Logger (~> 7.8)
+  - FirebaseCoreInternal (10.12.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseDatabase (10.12.0):
+    - FirebaseCore (~> 10.0)
+    - leveldb-library (~> 1.22)
+  - FirebaseInstallations (10.12.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
+  - GoogleAppMeasurement (10.12.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.12.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (10.12.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.12.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.12.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleUtilities/AppDelegateSwizzler (7.11.1):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.11.1):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.11.1):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.11.1):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.11.1):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.11.1)"
+  - GoogleUtilities/Reachability (7.11.1):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.11.1):
+    - GoogleUtilities/Logger
+  - leveldb-library (1.22.2)
+  - nanopb (2.30909.0):
+    - nanopb/decode (= 2.30909.0)
+    - nanopb/encode (= 2.30909.0)
+  - nanopb/decode (2.30909.0)
+  - nanopb/encode (2.30909.0)
+  - Pageboy (3.7.0)
+  - PromisesObjC (2.2.0)
+  - R.swift (7.3.2)
+  - Tabman (2.13.0):
+    - Pageboy (~> 3.7.0)
+  - TinyConstraints (4.0.2)
+  - XLPagerTabStrip (9.0.0)
+
+DEPENDENCIES:
+  - BonMot
+  - DynamicColor
+  - Firebase/Analytics
+  - Firebase/Database
+  - R.swift
+  - Tabman (~> 2.9)
+  - TinyConstraints
+  - XLPagerTabStrip
+
+SPEC REPOS:
+  trunk:
+    - BonMot
+    - DynamicColor
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreInternal
+    - FirebaseDatabase
+    - FirebaseInstallations
+    - GoogleAppMeasurement
+    - GoogleUtilities
+    - leveldb-library
+    - nanopb
+    - Pageboy
+    - PromisesObjC
+    - R.swift
+    - Tabman
+    - TinyConstraints
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  BonMot: 1534503509ef48d3c4d0fbec2d0ea35f2887b4ea
+  DynamicColor: d049834ef86d8ecf150b0ca1ebe54ee733a0ec22
+  Firebase: 07150e75d142fb9399f6777fa56a187b17f833a0
+  FirebaseAnalytics: 0270389efbe3022b54ec4588862dabec3477ee98
+  FirebaseCore: f86a1394906b97ac445ae49c92552a9425831bed
+  FirebaseCoreInternal: 950500ad8a08963657f6d8c67b579740c06d6aa1
+  FirebaseDatabase: 6d998d7ef2c1723b3e798a85e61a7dc0504b1ea0
+  FirebaseInstallations: 7b99ef103f013624444c614397038219c45f8e63
+  GoogleAppMeasurement: 2d800fab85e7848b1e66a6f8ce5bca06c5aad892
+  GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
+  leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
+  nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  Pageboy: fe646118f7168960058bea7a96038386aa7c0da8
+  PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
+  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+  Tabman: 66ea44c44488327ec20f3c8dc5554a5d22f5908c
+  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+
+PODFILE CHECKSUM: 8ebb8a8021a670539073b28bcecf63b0d75a7922
+
+COCOAPODS: 1.12.1
