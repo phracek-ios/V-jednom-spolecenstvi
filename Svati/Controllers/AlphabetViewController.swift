@@ -1,20 +1,24 @@
 //
-//  ViewController.swift
+//  AlphabetViewController.swift
 //  Svati
 //
-//  Created by Petr Hracek on 17.07.2023.
+//  Created by Petr Hracek on 19.07.2023.
 //
 
+import Foundation
 import UIKit
 import FirebaseAnalytics
 import FirebaseDatabase
 import Tabman
 import Pageboy
 
-class DnesniSvetciViewController: TabmanViewController {
-
+class AlphabetViewController: TabmanViewController {
+    
     fileprivate var svatiStructure: SvatiStructure?
-    fileprivate var svatiList = [Svati]()
+    var id = 0
+    fileprivate var indexAlphabet = ["A", "B", "C", "Č", "D", "E", "F", "G", "H", "CH", "I", "J", "K", "L", "M", "N", "O", "P", "R", "Ř", "S", "Š", "T", "U", "V", "Z", "Ž"]
+    fileprivate var indexCalendar = ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"]
+
     private var viewControllers: [UIViewController] = []
     
     
@@ -22,30 +26,11 @@ class DnesniSvetciViewController: TabmanViewController {
         super.viewDidLoad()
         svatiStructure = SvatiDataService.shared.svatiStructure
         // Do any additional setup after loading the view.
-        get_svati()
         self.viewControllers = self.loadViewControllers()
         loadTabBar()
         
-        let nextItem = UIBarButtonItem(image: UIImage(named: "ic_info"), style: .plain, target: self, action: #selector(nextBtn_pressed))
-        let prevItem = UIBarButtonItem(title: "Včera", style: .plain, target: self, action: #selector(prevBtn_pressed))
-        nextItem.tintColor = .blue
-        navigationItem.rightBarButtonItem = nextItem
         navigationController?.navigationBar.barStyle = UIBarStyle.default
     }
-
-    // Svati na jeden den muzou byt i dva !!!!!
-    // Ziskat den a nasledne najit v databazi odpovidajici svetce
-    // Jeden nebo Dva Taby
-
-    func get_svati() {
-        for svati in (svatiStructure?.svati)! {
-            if svati.den != get_day() || svati.mesic != get_month() {
-                continue
-            }
-            svatiList.append(svati)
-        }
-    }
-    
     func loadTabBar() {
         self.dataSource = self
         let bar = TMBar.ButtonBar()
@@ -69,31 +54,38 @@ class DnesniSvetciViewController: TabmanViewController {
         
         addBar(bar, dataSource: self, at: .top)
     }
-    
     func loadViewControllers() -> [UIViewController] {
         var controllers: [UIViewController] = []
-        print("loadViewControllers: \(svatiList.count)")
-        for i in 0..<svatiList.count {
-            let vc = DnesniSvatyViewController()
-            vc.id = i
-            vc.text = svatiList[i].text
-            vc.popis = svatiList[i].popis
-            vc.pagerTabTitle = svatiList[i].jmeno
-            controllers.append(vc)
+        if id == 0 {
+            print("loadViewControllers: \(indexAlphabet.count)")
+            for alpha in indexAlphabet {
+                print(alpha)
+                //            let vc = DnesniSvatyViewController()
+                //            vc.id = i
+                //            vc.text = svatiList[i].text
+                //            vc.popis = svatiList[i].popis
+                //            vc.pagerTabTitle = svatiList[i].jmeno
+                //            controllers.append(vc)
+            }
+        }
+        else {
+            print("loadViewControllers: \(indexCalendar.count)")
+            for alpha in indexCalendar {
+                print(alpha)
+                //            let vc = DnesniSvatyViewController()
+                //            vc.id = i
+                //            vc.text = svatiList[i].text
+                //            vc.popis = svatiList[i].popis
+                //            vc.pagerTabTitle = svatiList[i].jmeno
+                //            controllers.append(vc)
+            }
         }
         return controllers
-    }
-    
-    @objc func nextBtn_pressed() {
-        debugPrint("Next Button clicked")
-    }
-    @objc func prevBtn_pressed() {
-        debugPrint("Next Button clicked")
     }
 }
 
 // MARK: - Private
-extension DnesniSvetciViewController: PageboyViewControllerDataSource, TMBarDataSource {
+extension AlphabetViewController: PageboyViewControllerDataSource, TMBarDataSource {
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
         print(viewControllers.count)
         return viewControllers.count
@@ -106,13 +98,11 @@ extension DnesniSvetciViewController: PageboyViewControllerDataSource, TMBarData
         return .at(index: 0)
     }
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
-        title = ""
-        for i in 0..<svatiList.count {
-            if i != index {
-                continue
-            }
-            title = svatiList[i].jmeno
+        if id == 0 {
+            return TMBarItem(title: indexAlphabet[index])
         }
-        return TMBarItem(title: title!)
+        else {
+            return TMBarItem(title: indexCalendar[index])
+        }
     }
 }

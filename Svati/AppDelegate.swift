@@ -17,20 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SvatiDataService.shared.loadData()
         //FirebaseApp.configure()
         if #available(iOS 15.0, *) {
+            print("iOS 15")
             let appearance = UINavigationBarAppearance()
             appearance.configureWithOpaqueBackground()
             appearance.backgroundColor = UIColor.SvatiColor.darkGreenColor()
             appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-            UINavigationBar.appearance().barTintColor = UIColor.SvatiColor.darkGreenColor()
-            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.SvatiColor.mainTextColor()]
+            UINavigationBar.appearance().barTintColor =  UIColor.SvatiColor.darkGreenColor()
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white] //UIColor.SvatiColor.mainTextColor()]
             UINavigationBar.appearance().isTranslucent = false
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
             UITabBar.appearance().barTintColor = UIColor.SvatiColor.lightGreenColor()
-            UITabBar.appearance().tintColor = UIColor.SvatiColor.mainTextColor()
+            UITabBar.appearance().tintColor =  UIColor.SvatiColor.mainTextColor()
             UITabBar.appearance().isTranslucent = false
         } else {
-        //Database.database().isPersistenceEnabled = true
             UINavigationBar.appearance().barTintColor = UIColor.SvatiColor.darkGreenColor()
             UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.SvatiColor.mainTextColor()]
             UINavigationBar.appearance().isTranslucent = false

@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		010356812A657F7B00CBC59A /* GeneratorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010356802A657F7B00CBC59A /* GeneratorText.swift */; };
+		0135AF462A666DE7007459B9 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0135AF452A666DE7007459B9 /* DateManager.swift */; };
+		0135AF482A668A13007459B9 /* DnesniSvatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0135AF472A668A13007459B9 /* DnesniSvatyViewController.swift */; };
+		0135AF4A2A66AE6C007459B9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0135AF492A66AE6C007459B9 /* Extensions.swift */; };
 		0157E1822A6576BA00FB0559 /* SvatiDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0157E1812A6576BA00FB0559 /* SvatiDataService.swift */; };
 		0157E1852A65772200FB0559 /* SvatiStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0157E1842A65772200FB0559 /* SvatiStructure.swift */; };
 		0157E1882A657A7600FB0559 /* database.json in Resources */ = {isa = PBXBuildFile; fileRef = 0157E1872A657A7600FB0559 /* database.json */; };
+		016831932A67F62C00AE6E4F /* SeznamSvetcuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016831922A67F62C00AE6E4F /* SeznamSvetcuTableViewCell.swift */; };
+		016831952A67FB5000AE6E4F /* AlphabetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016831942A67FB5000AE6E4F /* AlphabetViewController.swift */; };
 		018BFE722A655247008E13CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE712A655247008E13CB /* AppDelegate.swift */; };
 		018BFE742A655247008E13CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE732A655247008E13CB /* SceneDelegate.swift */; };
 		018BFE762A655247008E13CB /* DnesniSvetciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE752A655247008E13CB /* DnesniSvetciViewController.swift */; };
@@ -46,9 +51,14 @@
 
 /* Begin PBXFileReference section */
 		010356802A657F7B00CBC59A /* GeneratorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorText.swift; sourceTree = "<group>"; };
+		0135AF452A666DE7007459B9 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		0135AF472A668A13007459B9 /* DnesniSvatyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnesniSvatyViewController.swift; sourceTree = "<group>"; };
+		0135AF492A66AE6C007459B9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0157E1812A6576BA00FB0559 /* SvatiDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiDataService.swift; sourceTree = "<group>"; };
 		0157E1842A65772200FB0559 /* SvatiStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiStructure.swift; sourceTree = "<group>"; };
 		0157E1872A657A7600FB0559 /* database.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = database.json; sourceTree = "<group>"; };
+		016831922A67F62C00AE6E4F /* SeznamSvetcuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeznamSvetcuTableViewCell.swift; sourceTree = "<group>"; };
+		016831942A67FB5000AE6E4F /* AlphabetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetViewController.swift; sourceTree = "<group>"; };
 		018BFE6E2A655247008E13CB /* Svati.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Svati.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018BFE712A655247008E13CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		018BFE732A655247008E13CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +131,14 @@
 			path = SupportedFiles;
 			sourceTree = "<group>";
 		};
+		016831912A67F61900AE6E4F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				016831922A67F62C00AE6E4F /* SeznamSvetcuTableViewCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		018BFE652A655247008E13CB = {
 			isa = PBXGroup;
 			children = (
@@ -180,10 +198,13 @@
 		01FBB11B2A65561B004A34C6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				016831912A67F61900AE6E4F /* Models */,
+				016831942A67FB5000AE6E4F /* AlphabetViewController.swift */,
+				0135AF472A668A13007459B9 /* DnesniSvatyViewController.swift */,
 				018BFE752A655247008E13CB /* DnesniSvetciViewController.swift */,
+				01FBB1202A657356004A34C6 /* OAplikaciViewController.swift */,
 				01FBB11C2A6557F7004A34C6 /* SvatiTabBarController.swift */,
 				01FBB11E2A657323004A34C6 /* SeznamSvetcuTableViewController.swift */,
-				01FBB1202A657356004A34C6 /* OAplikaciViewController.swift */,
 				01FBB1222A65737D004A34C6 /* VyhledavaniViewController.swift */,
 			);
 			path = Controllers;
@@ -194,6 +215,8 @@
 			children = (
 				01FBB1252A65745B004A34C6 /* SvatiColor.swift */,
 				010356802A657F7B00CBC59A /* GeneratorText.swift */,
+				0135AF452A666DE7007459B9 /* DateManager.swift */,
+				0135AF492A66AE6C007459B9 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -391,9 +414,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				01FBB1212A657356004A34C6 /* OAplikaciViewController.swift in Sources */,
+				0135AF462A666DE7007459B9 /* DateManager.swift in Sources */,
 				018BFE762A655247008E13CB /* DnesniSvetciViewController.swift in Sources */,
+				0135AF482A668A13007459B9 /* DnesniSvatyViewController.swift in Sources */,
 				01FBB11F2A657323004A34C6 /* SeznamSvetcuTableViewController.swift in Sources */,
+				016831932A67F62C00AE6E4F /* SeznamSvetcuTableViewCell.swift in Sources */,
 				01FBB1232A65737D004A34C6 /* VyhledavaniViewController.swift in Sources */,
+				016831952A67FB5000AE6E4F /* AlphabetViewController.swift in Sources */,
 				0157E1822A6576BA00FB0559 /* SvatiDataService.swift in Sources */,
 				010356812A657F7B00CBC59A /* GeneratorText.swift in Sources */,
 				01FBB11D2A6557F8004A34C6 /* SvatiTabBarController.swift in Sources */,
@@ -401,6 +428,7 @@
 				018BFE722A655247008E13CB /* AppDelegate.swift in Sources */,
 				018BFE742A655247008E13CB /* SceneDelegate.swift in Sources */,
 				0157E1852A65772200FB0559 /* SvatiStructure.swift in Sources */,
+				0135AF4A2A66AE6C007459B9 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

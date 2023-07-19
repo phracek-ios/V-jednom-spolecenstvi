@@ -27,6 +27,8 @@ func generateContent(text: String, font_name: String = "Helvetica", size: CGFloa
     let paragraph = baseStyle.byAdding(
         .paragraphSpacingBefore(20)
     )
+    let centerStyle = baseStyle.byAdding(
+        .alignment(.center))
     
     let redStyle = StringStyle(
         .color(.red)
@@ -38,7 +40,8 @@ func generateContent(text: String, font_name: String = "Helvetica", size: CGFloa
         .style("small", small),
         .style("p", paragraph),
         .style("br", paragraph),
-        .style("red", redStyle)
+        .style("red", redStyle),
+        .style("center", centerStyle)
     ]
     
     let content = baseStyle.byAdding(
