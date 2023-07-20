@@ -45,7 +45,7 @@ extension UIColor {
         }
         
         static func inActiveColor() -> UIColor {
-            return UIColor.white.withAlphaComponent(0.7)
+            return UIColor.lightGray
         }
         
     }

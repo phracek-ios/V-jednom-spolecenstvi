@@ -1,5 +1,5 @@
 //
-//  AlphabetViewController.swift
+//  ListViewController.swift
 //  Svati
 //
 //  Created by Petr Hracek on 19.07.2023.
@@ -12,7 +12,7 @@ import FirebaseDatabase
 import Tabman
 import Pageboy
 
-class AlphabetViewController: TabmanViewController {
+class ListViewController: TabmanViewController {
     
     fileprivate var svatiStructure: SvatiStructure?
     var id = 0
@@ -37,8 +37,8 @@ class AlphabetViewController: TabmanViewController {
         bar.backgroundView.style = .flat(color: UIColor.SvatiColor.lightGreenColor())
         //bar.backgroundView.style = .blur(style: .light)
         bar.backgroundColor = UIColor.SvatiColor.lightGreenColor()
-        bar.layout.contentInset = UIEdgeInsets(top: 0.0, left: 30.0, bottom: 0.0, right: 30.0)
-        bar.layout.contentMode = .fit
+        bar.layout.contentInset = UIEdgeInsets(top: 0.0, left: 10, bottom: 0.0, right: 10)
+        bar.layout.contentMode = .intrinsic
         bar.layout.transitionStyle = .progressive
         bar.layout.interButtonSpacing = 10
         bar.fadesContentEdges = true
@@ -57,27 +57,21 @@ class AlphabetViewController: TabmanViewController {
     func loadViewControllers() -> [UIViewController] {
         var controllers: [UIViewController] = []
         if id == 0 {
-            print("loadViewControllers: \(indexAlphabet.count)")
             for alpha in indexAlphabet {
-                print(alpha)
-                //            let vc = DnesniSvatyViewController()
-                //            vc.id = i
-                //            vc.text = svatiList[i].text
-                //            vc.popis = svatiList[i].popis
-                //            vc.pagerTabTitle = svatiList[i].jmeno
-                //            controllers.append(vc)
+                let vc = ListSvetcuTableViewController()
+                vc.id = id
+                vc.indexList = alpha
+                vc.pagerTabTitle = alpha
+                controllers.append(vc)
             }
         }
         else {
-            print("loadViewControllers: \(indexCalendar.count)")
             for alpha in indexCalendar {
-                print(alpha)
-                //            let vc = DnesniSvatyViewController()
-                //            vc.id = i
-                //            vc.text = svatiList[i].text
-                //            vc.popis = svatiList[i].popis
-                //            vc.pagerTabTitle = svatiList[i].jmeno
-                //            controllers.append(vc)
+                let vc = ListSvetcuTableViewController()
+                vc.id = id
+                vc.indexList = alpha
+                vc.pagerTabTitle = alpha
+                controllers.append(vc)
             }
         }
         return controllers
@@ -85,7 +79,7 @@ class AlphabetViewController: TabmanViewController {
 }
 
 // MARK: - Private
-extension AlphabetViewController: PageboyViewControllerDataSource, TMBarDataSource {
+extension ListViewController: PageboyViewControllerDataSource, TMBarDataSource {
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
         print(viewControllers.count)
         return viewControllers.count

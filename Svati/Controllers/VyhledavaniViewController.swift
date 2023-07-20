@@ -68,17 +68,24 @@ class VyhledavaniViewController: UIViewController, UITextFieldDelegate {
         svatiStructure = SvatiDataService.shared.svatiStructure
         findTextField.delegate = self
         setupView()
-        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Zpět", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.barStyle = UIBarStyle.black;
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.parent?.title = "Vyhledávání"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Zpět", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.barStyle = UIBarStyle.black;
+    }
+
     private func setupView() {
         self.view.addSubview(stackView)
         stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 5).isActive = true
         stackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -5).isActive = true
         stackView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 5).isActive = true
         stackView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -5).isActive = true
-        stackView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        //stackView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
 
         stackView.addSubview(staticLabel)
         stackView.addSubview(findTextField)
@@ -111,7 +118,7 @@ class VyhledavaniViewController: UIViewController, UITextFieldDelegate {
         self.findTextField.textColor = self.textColor
         self.findTextField.layer.borderColor = UIColor.black.cgColor
         findTextField.attributedPlaceholder = NSAttributedString(
-            string: " Vyhledejte slovo či část slova v katechismus",
+            string: "Zadejte hledaný text",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.SvatiColor.inActiveColor()]
             )
     }

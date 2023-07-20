@@ -44,6 +44,13 @@ class OAplikaciViewController: UIViewController, UITextViewDelegate {
         navigationController?.navigationBar.barStyle = UIBarStyle.black;
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Zpět", style: .plain, target: nil, action: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.parent?.title = "O aplikaci"
+
+    }
+    
 }
 extension OAplikaciViewController {
     private func setupView() {

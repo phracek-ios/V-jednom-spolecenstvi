@@ -14,8 +14,10 @@
 		0157E1822A6576BA00FB0559 /* SvatiDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0157E1812A6576BA00FB0559 /* SvatiDataService.swift */; };
 		0157E1852A65772200FB0559 /* SvatiStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0157E1842A65772200FB0559 /* SvatiStructure.swift */; };
 		0157E1882A657A7600FB0559 /* database.json in Resources */ = {isa = PBXBuildFile; fileRef = 0157E1872A657A7600FB0559 /* database.json */; };
+		015EFD682A6958AA00812D48 /* ListSvetcuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015EFD672A6958AA00812D48 /* ListSvetcuTableViewController.swift */; };
+		015EFD6A2A695A5D00812D48 /* ListSvetcuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015EFD692A695A5D00812D48 /* ListSvetcuTableViewCell.swift */; };
 		016831932A67F62C00AE6E4F /* SeznamSvetcuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016831922A67F62C00AE6E4F /* SeznamSvetcuTableViewCell.swift */; };
-		016831952A67FB5000AE6E4F /* AlphabetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016831942A67FB5000AE6E4F /* AlphabetViewController.swift */; };
+		016831952A67FB5000AE6E4F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016831942A67FB5000AE6E4F /* ListViewController.swift */; };
 		018BFE722A655247008E13CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE712A655247008E13CB /* AppDelegate.swift */; };
 		018BFE742A655247008E13CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE732A655247008E13CB /* SceneDelegate.swift */; };
 		018BFE762A655247008E13CB /* DnesniSvetciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BFE752A655247008E13CB /* DnesniSvetciViewController.swift */; };
@@ -57,8 +59,10 @@
 		0157E1812A6576BA00FB0559 /* SvatiDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiDataService.swift; sourceTree = "<group>"; };
 		0157E1842A65772200FB0559 /* SvatiStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiStructure.swift; sourceTree = "<group>"; };
 		0157E1872A657A7600FB0559 /* database.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = database.json; sourceTree = "<group>"; };
+		015EFD672A6958AA00812D48 /* ListSvetcuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSvetcuTableViewController.swift; sourceTree = "<group>"; };
+		015EFD692A695A5D00812D48 /* ListSvetcuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSvetcuTableViewCell.swift; sourceTree = "<group>"; };
 		016831922A67F62C00AE6E4F /* SeznamSvetcuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeznamSvetcuTableViewCell.swift; sourceTree = "<group>"; };
-		016831942A67FB5000AE6E4F /* AlphabetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetViewController.swift; sourceTree = "<group>"; };
+		016831942A67FB5000AE6E4F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		018BFE6E2A655247008E13CB /* Svati.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Svati.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018BFE712A655247008E13CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		018BFE732A655247008E13CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				016831922A67F62C00AE6E4F /* SeznamSvetcuTableViewCell.swift */,
+				015EFD692A695A5D00812D48 /* ListSvetcuTableViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,9 +204,10 @@
 			isa = PBXGroup;
 			children = (
 				016831912A67F61900AE6E4F /* Models */,
-				016831942A67FB5000AE6E4F /* AlphabetViewController.swift */,
 				0135AF472A668A13007459B9 /* DnesniSvatyViewController.swift */,
 				018BFE752A655247008E13CB /* DnesniSvetciViewController.swift */,
+				015EFD672A6958AA00812D48 /* ListSvetcuTableViewController.swift */,
+				016831942A67FB5000AE6E4F /* ListViewController.swift */,
 				01FBB1202A657356004A34C6 /* OAplikaciViewController.swift */,
 				01FBB11C2A6557F7004A34C6 /* SvatiTabBarController.swift */,
 				01FBB11E2A657323004A34C6 /* SeznamSvetcuTableViewController.swift */,
@@ -414,16 +420,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				01FBB1212A657356004A34C6 /* OAplikaciViewController.swift in Sources */,
+				015EFD6A2A695A5D00812D48 /* ListSvetcuTableViewCell.swift in Sources */,
 				0135AF462A666DE7007459B9 /* DateManager.swift in Sources */,
 				018BFE762A655247008E13CB /* DnesniSvetciViewController.swift in Sources */,
 				0135AF482A668A13007459B9 /* DnesniSvatyViewController.swift in Sources */,
 				01FBB11F2A657323004A34C6 /* SeznamSvetcuTableViewController.swift in Sources */,
 				016831932A67F62C00AE6E4F /* SeznamSvetcuTableViewCell.swift in Sources */,
 				01FBB1232A65737D004A34C6 /* VyhledavaniViewController.swift in Sources */,
-				016831952A67FB5000AE6E4F /* AlphabetViewController.swift in Sources */,
+				016831952A67FB5000AE6E4F /* ListViewController.swift in Sources */,
 				0157E1822A6576BA00FB0559 /* SvatiDataService.swift in Sources */,
 				010356812A657F7B00CBC59A /* GeneratorText.swift in Sources */,
 				01FBB11D2A6557F8004A34C6 /* SvatiTabBarController.swift in Sources */,
+				015EFD682A6958AA00812D48 /* ListSvetcuTableViewController.swift in Sources */,
 				01FBB1262A65745B004A34C6 /* SvatiColor.swift in Sources */,
 				018BFE722A655247008E13CB /* AppDelegate.swift in Sources */,
 				018BFE742A655247008E13CB /* SceneDelegate.swift in Sources */,

@@ -12,7 +12,7 @@ class SvatiTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = ""
+        //title = "V jednom společenství"
         let dnesniSvetciTableViewController = DnesniSvetciViewController()
         dnesniSvetciTableViewController.tabBarItem = UITabBarItem(title: "Dnešní světci", image: UIImage(named: "ic_priest"), tag: 0)
 

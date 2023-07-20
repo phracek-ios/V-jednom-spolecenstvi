@@ -32,6 +32,12 @@ class DnesniSvetciViewController: TabmanViewController {
         navigationItem.rightBarButtonItem = nextItem
         navigationController?.navigationBar.barStyle = UIBarStyle.default
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.parent?.title = "V jednom společenství"
+
+    }
 
     // Svati na jeden den muzou byt i dva !!!!!
     // Ziskat den a nasledne najit v databazi odpovidajici svetce

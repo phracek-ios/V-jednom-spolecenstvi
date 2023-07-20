@@ -33,7 +33,13 @@ class SeznamSvetcuTableViewController: UITableViewController {
                                        AnalyticsParameterScreenClass: className])
         self.tableView.tableFooterView = UIView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.parent?.title = "Seznam světců"
 
+    }
+    
     func setupSettingsTable() {
         tableView.register(SeznamSvetcuTableViewCell.self, forCellReuseIdentifier: SeznamSvetcuTableViewCell.cellId)
         
@@ -63,9 +69,9 @@ extension SeznamSvetcuTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = rowData[indexPath.row]
-        let alphaViewController = AlphabetViewController()
-        alphaViewController.id = data.id
-        navigationController?.pushViewController(alphaViewController, animated: true)
+        let listViewController = ListViewController()
+        listViewController.id = data.id
+        navigationController?.pushViewController(listViewController, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
