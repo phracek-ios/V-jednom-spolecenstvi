@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		010356812A657F7B00CBC59A /* GeneratorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010356802A657F7B00CBC59A /* GeneratorText.swift */; };
 		0135AF462A666DE7007459B9 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0135AF452A666DE7007459B9 /* DateManager.swift */; };
-		0135AF482A668A13007459B9 /* DnesniSvatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0135AF472A668A13007459B9 /* DnesniSvatyViewController.swift */; };
+		0135AF482A668A13007459B9 /* SvatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0135AF472A668A13007459B9 /* SvatyViewController.swift */; };
 		0135AF4A2A66AE6C007459B9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0135AF492A66AE6C007459B9 /* Extensions.swift */; };
 		0157E1822A6576BA00FB0559 /* SvatiDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0157E1812A6576BA00FB0559 /* SvatiDataService.swift */; };
 		0157E1852A65772200FB0559 /* SvatiStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0157E1842A65772200FB0559 /* SvatiStructure.swift */; };
@@ -54,7 +54,7 @@
 /* Begin PBXFileReference section */
 		010356802A657F7B00CBC59A /* GeneratorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorText.swift; sourceTree = "<group>"; };
 		0135AF452A666DE7007459B9 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
-		0135AF472A668A13007459B9 /* DnesniSvatyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnesniSvatyViewController.swift; sourceTree = "<group>"; };
+		0135AF472A668A13007459B9 /* SvatyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatyViewController.swift; sourceTree = "<group>"; };
 		0135AF492A66AE6C007459B9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0157E1812A6576BA00FB0559 /* SvatiDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiDataService.swift; sourceTree = "<group>"; };
 		0157E1842A65772200FB0559 /* SvatiStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatiStructure.swift; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				016831912A67F61900AE6E4F /* Models */,
-				0135AF472A668A13007459B9 /* DnesniSvatyViewController.swift */,
+				0135AF472A668A13007459B9 /* SvatyViewController.swift */,
 				018BFE752A655247008E13CB /* DnesniSvetciViewController.swift */,
 				015EFD672A6958AA00812D48 /* ListSvetcuTableViewController.swift */,
 				016831942A67FB5000AE6E4F /* ListViewController.swift */,
@@ -423,7 +423,7 @@
 				015EFD6A2A695A5D00812D48 /* ListSvetcuTableViewCell.swift in Sources */,
 				0135AF462A666DE7007459B9 /* DateManager.swift in Sources */,
 				018BFE762A655247008E13CB /* DnesniSvetciViewController.swift in Sources */,
-				0135AF482A668A13007459B9 /* DnesniSvatyViewController.swift in Sources */,
+				0135AF482A668A13007459B9 /* SvatyViewController.swift in Sources */,
 				01FBB11F2A657323004A34C6 /* SeznamSvetcuTableViewController.swift in Sources */,
 				016831932A67F62C00AE6E4F /* SeznamSvetcuTableViewCell.swift in Sources */,
 				01FBB1232A65737D004A34C6 /* VyhledavaniViewController.swift in Sources */,

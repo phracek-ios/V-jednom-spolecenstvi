@@ -26,6 +26,7 @@ class ListSvetcuTableViewController: UITableViewController {
         let name: String
         let date: String
         let popis: String
+        let text: String
     }
     
     fileprivate var rowData = [ListSvetcuRowData] ()
@@ -56,13 +57,13 @@ class ListSvetcuTableViewController: UITableViewController {
                     if String(svati.jmeno[0]) != String(indexList) {
                         continue
                     }
-                    rowData.append(ListSvetcuRowData(name: svati.jmeno, date: "\(svati.den).\(svati.mesic)", popis: svati.popis))
+                    rowData.append(ListSvetcuRowData(name: svati.jmeno, date: "\(svati.den).\(svati.mesic)", popis: svati.popis, text: svati.text))
                 }
                 else {
                     if String(svati.jmeno[4]) != String(indexList) {
                         continue
                     }
-                    rowData.append(ListSvetcuRowData(name: svati.jmeno, date: "\(svati.den).\(svati.mesic)", popis: svati.popis))
+                    rowData.append(ListSvetcuRowData(name: svati.jmeno, date: "\(svati.den).\(svati.mesic)", popis: svati.popis, text: svati.text))
                 }
             }
             // Kalendar
@@ -71,7 +72,7 @@ class ListSvetcuTableViewController: UITableViewController {
                 if svati.mesic != (month_index+1) {
                     continue
                 }
-                rowData.append(ListSvetcuRowData(name: svati.jmeno, date: "\(svati.den).\(svati.mesic)", popis: svati.popis))
+                rowData.append(ListSvetcuRowData(name: svati.jmeno, date: "\(svati.den).\(svati.mesic)", popis: svati.popis, text: svati.text))
 
             }
         }
@@ -105,12 +106,15 @@ extension ListSvetcuTableViewController {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let data = rowData[indexPath.row]
-//        let listViewController = ListViewController()
-//        listViewController.id = data.id
-//        navigationController?.pushViewController(listViewController, animated: true)
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = rowData[indexPath.row]
+        let svatyViewController = SvatyViewController()
+        svatyViewController.id = 9999
+        svatyViewController.jmeno = data.name
+        svatyViewController.popis = data.popis
+        svatyViewController.text = data.text
+        navigationController?.pushViewController(svatyViewController, animated: true)
+    }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
