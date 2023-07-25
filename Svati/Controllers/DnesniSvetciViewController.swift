@@ -34,12 +34,7 @@ class DnesniSvetciViewController: TabmanViewController {
         super.viewWillAppear(animated)
         self.parent?.title = "V jednom společenství"
         self.title = "Dnešní svědci"
-//        let nextItem = UIBarButtonItem(title: "ZÍTRA", style: .plain, target: self, action: #selector(nextBtn_pressed))
-//        let prevItem = UIBarButtonItem(title: "VČERA", style: .plain, target: self, action: #selector(prevBtn_pressed))
-//        nextItem.tintColor = UIColor.SvatiColor.mainTextColor()
-//        prevItem.tintColor = UIColor.SvatiColor.mainTextColor()
-//        self.parent?.navigationItem.rightBarButtonItems = [nextItem, prevItem ]
-        self.parent?.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        self.tabBarController?.tabBar.backgroundColor = UIColor.SvatiColor.darkGreenColor()
         Analytics.logEvent(AnalyticsEventScreenView,
                            parameters:[AnalyticsParameterScreenName: self.className,
                                        AnalyticsParameterScreenClass: className])
@@ -73,7 +68,6 @@ class DnesniSvetciViewController: TabmanViewController {
     
     func loadViewControllers() -> [UIViewController] {
         var controllers: [UIViewController] = []
-        print("loadViewControllers: \(svatiList.count)")
         for i in 0..<svatiList.count {
             let vc = SvatyViewController()
             vc.id = i
@@ -116,7 +110,6 @@ class DnesniSvetciViewController: TabmanViewController {
             }
             svatiList.append(svati)
         }
-        print(svatiList)
     }
     
 }

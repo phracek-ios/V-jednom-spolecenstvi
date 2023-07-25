@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		010356812A657F7B00CBC59A /* GeneratorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010356802A657F7B00CBC59A /* GeneratorText.swift */; };
+		012613F72A6ECD4F0026D9BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 012613F62A6ECD4E0026D9BA /* GoogleService-Info.plist */; };
 		0135AF462A666DE7007459B9 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0135AF452A666DE7007459B9 /* DateManager.swift */; };
 		0135AF482A668A13007459B9 /* SvatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0135AF472A668A13007459B9 /* SvatyViewController.swift */; };
 		0135AF4A2A66AE6C007459B9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0135AF492A66AE6C007459B9 /* Extensions.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		010356802A657F7B00CBC59A /* GeneratorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorText.swift; sourceTree = "<group>"; };
+		012613F62A6ECD4E0026D9BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0135AF452A666DE7007459B9 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		0135AF472A668A13007459B9 /* SvatyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvatyViewController.swift; sourceTree = "<group>"; };
 		0135AF492A66AE6C007459B9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				018BFE732A655247008E13CB /* SceneDelegate.swift */,
 				018BFE7A2A655249008E13CB /* Assets.xcassets */,
 				018BFE7C2A655249008E13CB /* LaunchScreen.storyboard */,
+				012613F62A6ECD4E0026D9BA /* GoogleService-Info.plist */,
 				018BFE7F2A655249008E13CB /* Info.plist */,
 			);
 			path = Svati;
@@ -204,13 +207,13 @@
 			isa = PBXGroup;
 			children = (
 				016831912A67F61900AE6E4F /* Models */,
-				0135AF472A668A13007459B9 /* SvatyViewController.swift */,
 				018BFE752A655247008E13CB /* DnesniSvetciViewController.swift */,
 				015EFD672A6958AA00812D48 /* ListSvetcuTableViewController.swift */,
 				016831942A67FB5000AE6E4F /* ListViewController.swift */,
 				01FBB1202A657356004A34C6 /* OAplikaciViewController.swift */,
-				01FBB11C2A6557F7004A34C6 /* SvatiTabBarController.swift */,
 				01FBB11E2A657323004A34C6 /* SeznamSvetcuTableViewController.swift */,
+				01FBB11C2A6557F7004A34C6 /* SvatiTabBarController.swift */,
+				0135AF472A668A13007459B9 /* SvatyViewController.swift */,
 				01FBB1222A65737D004A34C6 /* VyhledavaniViewController.swift */,
 			);
 			path = Controllers;
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				018BFE7E2A655249008E13CB /* LaunchScreen.storyboard in Resources */,
+				012613F72A6ECD4F0026D9BA /* GoogleService-Info.plist in Resources */,
 				0157E1882A657A7600FB0559 /* database.json in Resources */,
 				018BFE7B2A655249008E13CB /* Assets.xcassets in Resources */,
 			);
@@ -605,7 +609,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 32253C46P7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Svati/Info.plist;
@@ -615,6 +619,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -636,7 +641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 32253C46P7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Svati/Info.plist;
@@ -646,6 +651,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

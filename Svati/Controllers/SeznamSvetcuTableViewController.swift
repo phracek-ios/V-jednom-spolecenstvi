@@ -32,6 +32,7 @@ class SeznamSvetcuTableViewController: UITableViewController {
                            parameters:[AnalyticsParameterScreenName: "Seznam svetcu",
                                        AnalyticsParameterScreenClass: className])
         self.tableView.tableFooterView = UIView()
+        self.tableView.backgroundColor = UIColor.SvatiColor.backLightColor()
     }
     
     override func viewWillAppear(_ animated: Bool) {

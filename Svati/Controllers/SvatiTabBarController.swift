@@ -29,8 +29,9 @@ class SvatiTabBarController: UITabBarController {
         
         viewControllers = tabBarList
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.SvatiColor.mainTextColor()]
-        navigationController?.navigationBar.barStyle = UIBarStyle.black
+        navigationController?.navigationBar.barTintColor = UIColor.SvatiColor.darkGreenColor()
         navigationController?.navigationBar.backItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.tabBarController?.tabBar.backgroundColor = UIColor.SvatiColor.darkGreenColor()
 
     }
     

@@ -26,6 +26,8 @@ class VyhledavaniViewController: UIViewController, UITextFieldDelegate {
     
     lazy var ok_button: UIButton = {
         let b = UIButton()
+        b.backgroundColor = UIColor.lightGray
+        b.setTitle("Vyhledat text", for: .normal)
         b.translatesAutoresizingMaskIntoConstraints = false
         return b
     }()
@@ -70,6 +72,7 @@ class VyhledavaniViewController: UIViewController, UITextFieldDelegate {
         setupView()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Zpět", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.barStyle = UIBarStyle.black;
+        self.tabBarController?.tabBar.backgroundColor = UIColor.SvatiColor.darkGreenColor()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -89,22 +92,22 @@ class VyhledavaniViewController: UIViewController, UITextFieldDelegate {
 
         stackView.addSubview(staticLabel)
         stackView.addSubview(findTextField)
+        stackView.addSubview(ok_button)
         stackView.addSubview(labelForNoneResults)
-        staticLabel.leftAnchor.constraint(equalTo: stackView.leftAnchor, constant: 20).isActive = true
-        staticLabel.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -20).isActive = true
-        staticLabel.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 20).isActive = true
-        findTextField.leftAnchor.constraint(equalTo: stackView.leftAnchor, constant: 20).isActive = true
-        findTextField.topAnchor.constraint(equalTo: staticLabel.bottomAnchor, constant: 40).isActive = true
+        stackView.addConstraintsWithFormat(format: "V:|-15-[v0]-20-[v1]-20-[v2]-20-[v3]", views: staticLabel, findTextField, ok_button, labelForNoneResults)
+//        stackView.addConstraintsWithFormat(format: "H:|-15-[v0]-15-|", views: staticLabel)
+//        stackView.addConstraintsWithFormat(format: "H:|-15-[v0]-15-|", views: findTextField)
+//        stackView.addConstraintsWithFormat(format: "H:|-15-[v0]-15-|", views: labelForNoneResults)
         findTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
-
-        labelForNoneResults.leftAnchor.constraint(equalTo: stackView.leftAnchor, constant: 20).isActive = true
-        labelForNoneResults.topAnchor.constraint(equalTo: findTextField.bottomAnchor, constant: 20).isActive = true
-        labelForNoneResults.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -20).isActive = true
+        findTextField.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        ok_button.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        ok_button.centerXAnchor.constraint(equalTo: stackView.centerXAnchor).isActive = true
+        staticLabel.centerXAnchor.constraint(equalTo: stackView.centerXAnchor).isActive = true
+        findTextField.centerXAnchor.constraint(equalTo: stackView.centerXAnchor).isActive = true
+        labelForNoneResults.centerXAnchor.constraint(equalTo: stackView.centerXAnchor).isActive = true
 
         title = "Vyhledávání"
-        findTextField.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -20).isActive = true
-        findTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor, constant: -50).isActive = true
-        findTextField.addTarget(self, action: #selector(self.textFieldShouldReturn), for: .editingDidEndOnExit)
+//        findTextField.addTarget(self, action: #selector(self.textFieldShouldReturn), for: .editingDidEndOnExit)
         staticLabel.text = "Zadejte hledaný text"
         findTextField.returnKeyType = .done
         labelForNoneResults.isEnabled = false
@@ -112,8 +115,10 @@ class VyhledavaniViewController: UIViewController, UITextFieldDelegate {
         self.view.backgroundColor = self.backColor
         self.labelForNoneResults.backgroundColor = self.backColor
         self.labelForNoneResults.textColor = self.textColor
+        self.ok_button.setTitleColor(self.textColor, for: .normal)
         self.staticLabel.backgroundColor = self.backColor
         self.staticLabel.textColor = self.textColor
+        self.ok_button.addTarget(self, action: #selector(button_pressed), for: .touchUpInside)
         self.findTextField.backgroundColor = self.backColor
         self.findTextField.textColor = self.textColor
         self.findTextField.layer.borderColor = UIColor.black.cgColor
@@ -123,6 +128,34 @@ class VyhledavaniViewController: UIViewController, UITextFieldDelegate {
             )
     }
     
+    @objc func button_pressed(_ sender: UIButton) {
+        guard let svatiStructure = svatiStructure else { return }
+        var contSearchData = [String]()
+        self.findString = findTextField.text!
+        debugPrint(findString)
+        for svati in svatiStructure.svati {
+            if svati.jmeno.range(of: findString) != nil {
+                contSearchData.append(svati.jmeno)
+            }
+            if svati.text.range(of: findString) != nil {
+                contSearchData.append(svati.jmeno)
+            }
+        }
+
+        if contSearchData.count != 0 {
+            debugPrint(contSearchData.count)
+            let lstvc = ListSvetcuTableViewController()
+            lstvc.id = 2
+            lstvc.findString = self.findString
+            navigationController?.pushViewController(lstvc, animated: true)
+            findTextField.resignFirstResponder()
+        }
+        else {
+            labelForNoneResults.isEnabled = true
+            labelForNoneResults.text = "Hledaný výraz nebyl nalezen"
+        }
+
+    }
 }
 
 extension VyhledavaniViewController {
@@ -130,33 +163,37 @@ extension VyhledavaniViewController {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let svatiStructure = svatiStructure else { return false }
-        let stringToFind = findTextField.text! + string
-        if stringToFind.count < 3 {
-            labelForNoneResults.isEnabled = true
-            labelForNoneResults.text = "Hledaný výraz musí mít alespoň 3 znaky."
-            return true
-        }
-        print("ShouldChangeCharactersIn: \(stringToFind)")
-        var contSearchData = [String]()
-        for svati in svatiStructure.svati {
-            if svati.jmeno.range(of: stringToFind) != nil {
-                contSearchData.append(String(svati.jmeno))
-            }
-            if svati.text.range(of: stringToFind) != nil {
-                contSearchData.append(String(svati.jmeno))
-            }
-        }
-        if contSearchData.count != 0 {
-            labelForNoneResults.isEnabled = false
-            let textWithSep = contSearchData.joined(separator: "\n")
-            labelForNoneResults.attributedText = generateContent(text: "Hledaný výraz <b>\(stringToFind)</b> byl nalezen u následujících světců:\n\n" + textWithSep)
-            return true
-        }
-        else {
-            labelForNoneResults.isEnabled = true
-            labelForNoneResults.text = "Hledaný výraz nebyl nalezen"
-            return false
-        }
+        var stringToFind: String = findTextField.text! + string
+
+        labelForNoneResults.text = ""
+//        if stringToFind.count < 3 {
+//            labelForNoneResults.isEnabled = true
+//            return true
+//        }
+//
+//        print("ShouldChangeCharactersIn text : \(findTextField.text!)")
+//        print("ShouldChangeCharactersIn replacement: \(string)")
+//        var contSearchData = [String]()
+//        for svati in svatiStructure.svati {
+//            if svati.jmeno.range(of: stringToFind) != nil {
+//                contSearchData.append(String(svati.jmeno))
+//            }
+//            if svati.text.range(of: stringToFind) != nil {
+//                contSearchData.append(String(svati.jmeno))
+//            }
+//        }
+//        if contSearchData.count != 0 {
+//            labelForNoneResults.isEnabled = false
+//            let textWithSep = contSearchData.joined(separator: "\n")
+//            labelForNoneResults.attributedText = generateContent(text: "Hledaný výraz <b>\(stringToFind)</b> byl nalezen u následujících světců:\n\n" + textWithSep)
+//            return true
+//        }
+//        else {
+//            labelForNoneResults.isEnabled = true
+//            labelForNoneResults.text = "Hledaný výraz nebyl nalezen"
+//            return false
+//        }
+        return true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -175,11 +212,10 @@ extension VyhledavaniViewController {
 
         if contSearchData.count != 0 {
             print(contSearchData.count)
-//            let pcvc = ParagraphTableViewController()
-//            pcvc.kindOfSource = 2
-//            pcvc.findString = self.findString
-//            pcvc.findData = findData
-//            navigationController?.pushViewController(pcvc, animated: true)
+            let lstvc = ListSvetcuTableViewController()
+            lstvc.id = 2
+            lstvc.findString = self.findString
+            navigationController?.pushViewController(lstvc, animated: true)
             findTextField.resignFirstResponder()
         }
         else {

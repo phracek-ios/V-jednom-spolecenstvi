@@ -43,6 +43,7 @@ class OAplikaciViewController: UIViewController, UITextViewDelegate {
         textView.attributedText = attributedText
         navigationController?.navigationBar.barStyle = UIBarStyle.black;
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Zpět", style: .plain, target: nil, action: nil)
+        self.tabBarController?.tabBar.backgroundColor = UIColor.SvatiColor.darkGreenColor()
     }
     
     override func viewWillAppear(_ animated: Bool) {

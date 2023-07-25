@@ -78,11 +78,9 @@ class SvatyViewController: UIViewController {
 
         setupUI()
         popis = "<center><b>" + popis + "</b></center>"
-        print(popis)
         svatyPopisLabel.attributedText = generateContent(text: popis, color: self.textColor)
         svatyTextLabel.attributedText = generateContent(text: text, color: self.textColor)
-        print(id)
-        if id == 9999 {
+         if id == 9999 {
             self.title = jmeno
         }
         else {

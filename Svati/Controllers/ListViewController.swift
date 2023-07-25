@@ -16,7 +16,7 @@ class ListViewController: TabmanViewController {
     
     fileprivate var svatiStructure: SvatiStructure?
     var id = 0
-    fileprivate var indexAlphabet = ["A", "B", "C", "Č", "D", "E", "F", "G", "H", "CH", "I", "J", "K", "L", "M", "N", "O", "P", "R", "Ř", "S", "Š", "T", "U", "V", "Z", "Ž"]
+    fileprivate var indexAlphabet = ["A", "B", "C", "Č", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "Ř", "S", "Š", "T", "U", "V", "Z"]
     fileprivate var indexCalendar = ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"]
 
     private var viewControllers: [UIViewController] = []
@@ -28,7 +28,7 @@ class ListViewController: TabmanViewController {
         // Do any additional setup after loading the view.
         self.viewControllers = self.loadViewControllers()
         loadTabBar()
-        
+        self.tabBarController?.tabBar.backgroundColor = UIColor.SvatiColor.darkGreenColor()
         navigationController?.navigationBar.barStyle = UIBarStyle.default
     }
     func loadTabBar() {

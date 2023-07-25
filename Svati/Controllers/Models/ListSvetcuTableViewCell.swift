@@ -20,8 +20,34 @@ class ListSvetcuTableViewCell: UITableViewCell {
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
+    
+    var popis: UILabel = {
+        let l = UILabel()
+        l.textColor = .white
+        l.lineBreakMode = .byWordWrapping
+        l.numberOfLines = 0
+        l.textAlignment = .left
+        l.translatesAutoresizingMaskIntoConstraints = false
+        return l
+    }()
+    
+    var datum: UILabel = {
+        let l = UILabel()
+        l.textColor = .white
+        l.lineBreakMode = .byWordWrapping
+        l.numberOfLines = 0
+        l.textAlignment = .left
+        l.translatesAutoresizingMaskIntoConstraints = false
+        return l
+    }()
            
     lazy var stackView: UIStackView = {
+        let sv = UIStackView()
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        return sv
+    }()
+    
+    lazy var stackTextView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         return sv
@@ -44,24 +70,33 @@ class ListSvetcuTableViewCell: UITableViewCell {
         contentView.addSubview(stackView)
         stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5).isActive = true
         stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 5).isActive = true
-        stackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10).isActive = true
+        stackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5).isActive = true
         //stackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20).isActive = true
         stackView.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
-        stackView.addSubview(title)
-        stackView.addConstraintsWithFormat(format: "V:|-10-[v0]-10-|", views: title)
-        stackView.addConstraintsWithFormat(format: "H:|-10-[v0]-10-|", views: title)
-        
+        stackView.addSubview(datum)
+        stackView.addSubview(stackTextView)
+        stackTextView.addSubview(title)
+        stackTextView.addSubview(popis)
+        stackView.addConstraintsWithFormat(format: "V:|-5-[v0]-10-|", views: datum)
+        stackView.addConstraintsWithFormat(format: "V:|-5-[v0]-10-|", views: stackTextView)
+        stackView.addConstraintsWithFormat(format: "H:|-5-[v0(40)]-10-[v1]-10-|", views: datum, stackTextView)
+        stackTextView.addConstraintsWithFormat(format: "H:|-5-[v0]-10-|", views: title)
+        stackTextView.addConstraintsWithFormat(format: "H:|-5-[v0]-10-|", views: popis)
+        stackTextView.addConstraintsWithFormat(format: "V:|-5-[v0]-10-[v1]-10-|", views: title, popis)
+
     }
-    func configureCell(name: String, date: String, id: Int, cellWidth: CGFloat) {
+    func configureCell(name: String, desc:String, date: String, id: Int, cellWidth: CGFloat) {
         self.backColor = UIColor.SvatiColor.backLightColor()
         self.labelColor = UIColor.SvatiColor.textLightColor()
-        if id == 0 {
-            title.text = name
-        } else {
-            title.text = "\(date) \(name)"
-        }
         title.textColor = self.labelColor
         title.textAlignment = .left
+        title.attributedText = generateContent(text: "<b>\(name)</b>")
+        popis.text = desc
+        datum.attributedText = generateContent(text: "<b>\(date)</b>")
+        popis.textColor = self.labelColor
+        popis.textAlignment = .left
+        datum.textColor = self.labelColor
+        datum.textAlignment = .left
         self.backgroundColor = self.backColor
         selectionStyle = .gray
     }

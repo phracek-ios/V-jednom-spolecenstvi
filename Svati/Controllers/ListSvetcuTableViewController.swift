@@ -16,6 +16,7 @@ class ListSvetcuTableViewController: UITableViewController {
     var textColor = UIColor.SvatiColor.textLightColor()
     var popis: String = ""
     var text: String = ""
+    var findString: String = ""
     var id: Int = 0
     var indexList: String = ""
     var pagerTabTitle: String = ""
@@ -45,10 +46,11 @@ class ListSvetcuTableViewController: UITableViewController {
                            parameters:[AnalyticsParameterScreenName: "ListSvetcuTableViewController \(id):\(indexList)",
                                       AnalyticsParameterScreenClass: className])
         self.tableView.tableFooterView = UIView()
+        self.tableView.backgroundColor = UIColor.SvatiColor.backLightColor()
     }
     
     func loadData() {
-        debugPrint("\(id): \(indexList)")
+        debugPrint("\(id): \(indexList) \(findString)")
         for svati in (svatiStructure?.svati)! {
             // Abeceda
             if id == 0 {
@@ -67,13 +69,22 @@ class ListSvetcuTableViewController: UITableViewController {
                 }
             }
             // Kalendar
-            else {
+            else if id == 1 {
                 let month_index = indexCalendar.firstIndex(of: indexList)!
                 if svati.mesic != (month_index+1) {
                     continue
                 }
                 rowData.append(ListSvetcuRowData(name: svati.jmeno, date: "\(svati.den).\(svati.mesic)", popis: svati.popis, text: svati.text))
 
+            }
+            // Vyhledavani
+            else if id == 2 {
+                if svati.jmeno.range(of: findString) != nil {
+                    rowData.append(ListSvetcuRowData(name: svati.jmeno, date: "\(svati.den).\(svati.mesic)", popis: svati.popis, text: svati.text))
+                }
+                if svati.text.range(of: findString) != nil {
+                    rowData.append(ListSvetcuRowData(name: svati.jmeno, date: "\(svati.den).\(svati.mesic)", popis: svati.popis, text: svati.text))
+                }
             }
         }
     }
@@ -97,11 +108,9 @@ extension ListSvetcuTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ListSvetcuTableViewCell.cellId, for: indexPath) as! ListSvetcuTableViewCell
         let data = rowData[indexPath.row]
-        cell.configureCell(name: data.name, date: data.date, id: id, cellWidth: tableView.frame.width)
+        cell.configureCell(name: data.name, desc: data.popis, date: data.date, id: id, cellWidth: tableView.frame.width)
         cell.accessoryType = .disclosureIndicator
         cell.layer.borderColor = UIColor.SvatiColor.darkGreenColor().cgColor
-//        cell.layer.borderWidth = 1
-//        cell.layer.cornerRadius = 8
         cell.clipsToBounds = true
         return cell
     }
@@ -124,12 +133,3 @@ extension ListSvetcuTableViewController {
         return UITableView.automaticDimension
     }
 }
-
-//// MARK: - IndicatorInfoProvider
-//extension ListSvetcuTableViewController: IndicatorInfoProvider {
-//    
-//    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-//        return IndicatorInfo(title: pagerTabTitle)
-//    }
-//}
-

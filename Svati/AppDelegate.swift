@@ -15,9 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         SvatiDataService.shared.loadData()
-        //FirebaseApp.configure()
+        FirebaseApp.configure()
         if #available(iOS 15.0, *) {
-            print("iOS 15")
             let appearance = UINavigationBarAppearance()
             appearance.configureWithOpaqueBackground()
             appearance.backgroundColor = UIColor.SvatiColor.darkGreenColor()
@@ -27,15 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UINavigationBar.appearance().isTranslucent = false
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
-            UITabBar.appearance().barTintColor = UIColor.SvatiColor.lightGreenColor()
-            UITabBar.appearance().tintColor =  UIColor.SvatiColor.mainTextColor()
+            UITabBar.appearance().barTintColor = UIColor.SvatiColor.darkGreenColor()
+            UITabBar.appearance().tintColor =  .white
             UITabBar.appearance().isTranslucent = false
         } else {
             UINavigationBar.appearance().barTintColor = UIColor.SvatiColor.darkGreenColor()
             UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.SvatiColor.mainTextColor()]
             UINavigationBar.appearance().isTranslucent = false
-            UITabBar.appearance().barTintColor = UIColor.SvatiColor.lightGreenColor()
-            UITabBar.appearance().tintColor = UIColor.SvatiColor.mainTextColor()
+            UITabBar.appearance().barTintColor = UIColor.SvatiColor.darkGreenColor()
+            UITabBar.appearance().tintColor = .white
             UITabBar.appearance().isTranslucent = false
         }
         return true
